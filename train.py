@@ -300,7 +300,7 @@ def validate(netG, netI):
         print('FID: ', fid)
         fid_value += fid
         fids.append(fid)
-    fid_value /= 10
+    fid_value /= 3
     return fid_value, np.var(fids)
 
 if __name__ == '__main__':
