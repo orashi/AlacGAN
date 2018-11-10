@@ -185,7 +185,7 @@ class GivenIterationSampler(Sampler):
     def __iter__(self):
         if self.call == 0:
             self.call = 1
-            return iter(self.indices[(self.last_iter + 1) * self.batch_size:])
+            return iter(self.indices[(self.last_iter + 1) * self.batch_size * (self.diter + 1):])
         else:
             raise RuntimeError("this sampler is not designed to be called more than once!!")
 
