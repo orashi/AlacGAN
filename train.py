@@ -278,7 +278,7 @@ def main():
             logger.info(f'fid: {fid:.3f} ({var})\t')
 
             # remember best fid and save checkpoint
-            is_best = fid > best_fid
+            is_best = fid < best_fid
             best_fid = min(fid, best_fid)
             save_checkpoint({
                 'step': curr_iter,
