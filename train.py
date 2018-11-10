@@ -281,7 +281,7 @@ def main():
             is_best = fid < best_fid
             best_fid = min(fid, best_fid)
             save_checkpoint({
-                'step': curr_iter,
+                'step': curr_iter - 1,
                 'state_dictG': netG.state_dict(),
                 'state_dictD': netD.state_dict(),
                 'best_fid': best_fid,
